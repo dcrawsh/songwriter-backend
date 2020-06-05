@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Category.create([{ name: 'Pop' }, { name: 'Rap' }, {name: 'Acoustic'}, {name: 'Indie'}, {name: 'Rock'}])
+
+Song.create({name: 'Volpe 1', category_id: 1, chords: "G, C, D, F", lyrics: "I can walk a straight line"})
