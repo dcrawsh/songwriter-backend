@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_023405) do
+ActiveRecord::Schema.define(version: 2020_06_12_225531) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2020_06_05_023405) do
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "img_url"
     t.index ["category_id"], name: "index_songs_on_category_id"
   end
 
