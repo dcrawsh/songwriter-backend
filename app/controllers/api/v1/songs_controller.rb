@@ -9,12 +9,21 @@ class Api::V1::SongsController < ApplicationController
     end
 
     def create 
+        
         song = Song.new(song_params)
         
         if song.save
             render json: SongSerializer.new(song), status: :accepted
         else
             render json: {errors: song.errors.full_messages}, status: :unprocessible_entity
+        end
+    end
+
+    def update
+        
+        song = Song.find(params[:id])
+        if song.update(song_params)
+            render json: song
         end
     end
 
